@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-BulkyBook-5D436666-52A0-4C3E-9A84-BB588CB23A94</UserSecretsId>
+    <UserSecretsId>aspnet-BulkyBook</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
