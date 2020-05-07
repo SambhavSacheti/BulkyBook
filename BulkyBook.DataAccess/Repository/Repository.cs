@@ -49,8 +49,11 @@ namespace BulkyBook.DataAccess.Repository
                     query = query.Include(inclueProp);
                 }
             }
+               if(orderBy != null)
+               return  orderBy(query)?.ToList() ?? new List<T>();
+               else
+               return query.ToList<T>();
 
-            return orderBy(query)?.ToList() ?? query.ToList();
         }
 
         public T GetFirstorDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
