@@ -14,6 +14,8 @@ namespace BulkyBook.DataAccess.Data
         {
         }
 
-         public virtual DbSet<Category> Categories { get; set; } 
+        public virtual DbSet<Category> Categories { get; set; }
+
+        public virtual DbSet<CoverType> CoverTypes { get; set; }
     }
 }

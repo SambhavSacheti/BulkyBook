@@ -8,11 +8,13 @@ namespace BulkyBook.DataAccess.Repository
         private readonly ApplicationDbContext dbContext;
 
         public ICategoryRepository Category { get; private set;}
+        public ICoverTypeRepostiory CoverType { get; set; }
         public IStoredProc_Call StoredProc_Call {get;}
         public UnitOfWork(ApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
             Category = new CategoryRepository(dbContext);
+            CoverType = new CoverTypeRepository(dbContext);
             StoredProc_Call = new StoredProc_Call(dbContext);
         }
 
